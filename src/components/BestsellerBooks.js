@@ -26,6 +26,7 @@ function BestsellerBooks() {
     return (
         <div>
             <button><Link to="/random-books"> Go to random </Link></button>
+            <button><Link to="/full-overview"> Go to full overview </Link></button>
             <h1>BESTSELLER BOOKS</h1>
             <section>
                 { books.map((book) => {
