@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+//Material
+
+
+//stile
 
 function FullOverview() {
     const [ booksOverview, setBooksOverview ] = useState([]);
 
-    
+    //fetch
     const fetchBooksOverview = async () => {
         const res = await axios.get(
             `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${process.env.REACT_APP_GRAVIT_API_KEY}`
