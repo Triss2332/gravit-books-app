@@ -53,7 +53,7 @@ function Home() {
                 <img src={HeroImage} className={classes.bannerImage}></img>
             </Grid>
 
-            
+            <FullOverview />
         </Grid>
 
         

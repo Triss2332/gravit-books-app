@@ -50,6 +50,11 @@ function RandomBooks() {
                 <div>
                     <h1>Random Book Generator</h1>
                     <img src={BookImage} className={classes.bannerImage}></img>
+                    <br></br>
+                    <Button onClick={getBooks} variant="contained" className={classes.button}>
+                        Genera un libro
+                    </Button>
+                    <p>E inizia subito a leggere!</p>
                     <h3>Titolo: {toneBooks.title}</h3>
                     <h4 className={classes.space}>
                         Descrizione: {toneBooks.description}
@@ -61,11 +66,6 @@ function RandomBooks() {
                     <h4 className={classes.space}>
                         Casa editrice: {toneBooks.publisher}
                     </h4>
-
-                    <Button onClick={getBooks} variant="contained" className={classes.button}>
-                        Genera un libro
-                    </Button>
-                    <p>E inizia subito a leggere!</p>
                 </div>
             </Grid>
         </Grid>
