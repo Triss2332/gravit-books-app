@@ -16,12 +16,20 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'left',
     },
     bannerImage: {
-        maxWidth: 300,
-        alignItems: "right",
-        paddingRight: 50,
+        maxWidth: 300,   
+        marginRight: 40, 
+        [theme.breakpoints.up('md')]: {
+            maxWidth: 400,
+        },
+        [theme.breakpoints.up('lg')]: {
+            maxWidth: 500,
+        },
     },
     button: {
         color: "#FAF1F8"
+    },
+    container: {
+        textAlign: "right",
     },
 }));
 
@@ -49,7 +57,7 @@ function Home() {
                     </Button>
                 </Grid>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={6} className={classes.container}>
                 <img src={HeroImage} className={classes.bannerImage}></img>
             </Grid>
 
