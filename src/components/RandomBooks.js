@@ -23,7 +23,10 @@ const useStyles = makeStyles((theme) => ({
     },
     space: {
         marginTop: -15,
-    }
+    },
+    bottom: {
+        marginBottom: 40,
+    },
 }));
 
 
@@ -54,7 +57,7 @@ function RandomBooks() {
                     <Button onClick={getBooks} variant="contained" className={classes.button}>
                         Genera un libro
                     </Button>
-                    <p>E inizia subito a leggere!</p>
+                    <p className={classes.bottom}>E inizia subito a leggere!</p>
                     <h3>Titolo: {toneBooks.title}</h3>
                     <h4 className={classes.space}>
                         Descrizione: {toneBooks.description}
