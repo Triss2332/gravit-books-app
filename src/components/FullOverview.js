@@ -29,14 +29,17 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: "#FAF1F8"
     },
     image: {
-        maxWidth: 150,
+        maxWidh: 150,
     },
     img: {
         margin: 'auto',
         display: 'block',
         maxWidth: '100%',
         maxHeight: '100%',
-    },
+    }, 
+    container: {
+        padding: theme.spacing(2),
+    }
 }));
 
 
@@ -63,10 +66,9 @@ function FullOverview() {
 
     return (
         <Grid container>
-
-            <Grid item xs={12} >
+            <Grid item xs={12} className={classes.container}>
                 <h1 className={classes.title}>FULL OVERVIEW - HARD COVER FICTION BOOKS</h1>
-                <div className={classes.root}>
+                <Grid container spacing={3}>
                     {booksOverview.map((bookOverview) => {
                         const { rank,
                             book_image,
@@ -78,41 +80,42 @@ function FullOverview() {
                         } = bookOverview
 
                         return (
-                            <Paper className={classes.paper} key={rank}>
-
-                                <Grid container spacing={2}>
-                                    <Grid item>
-                                        <ButtonBase className={classes.image}>
-                                            <img src={book_image} alt={title} className={classes.img}></img>
-                                        </ButtonBase>
-                                    </Grid>
-                                    <Grid item xs={12} sm container>
-                                        <Grid item xs container direction="column" spacing={2}>
-                                            <Grid item xs>
-                                                <Typography gutterBottom variant="subtitle1">
-                                                    {title}
-                                                </Typography>
-                                                <Typography variant="body2" gutterBottom>
-                                                    {description}
-                                                </Typography>
-                                                <p>{author}</p>
-                                                <p>{publisher}</p>
-                                            </Grid>
-                                            <Grid item>
-                                                <Button variant="contained">
-                                                    <a href={amazon_product_url} className={classes.button}>
-                                                        Acquista
-                                                    </a>
-                                                </Button>
+                            <Grid item sm={12} md={6} lg={4} xl={3} className={classes.root}>
+                                <Paper className={classes.paper} key={rank}>
+                                    <Grid container spacing={2}>
+                                        <Grid item xs={4}>
+                                            <ButtonBase className={classes.image}>
+                                                <img src={book_image} alt={title} className={classes.img}></img>
+                                            </ButtonBase>
+                                        </Grid>
+                                        <Grid item xs={8} sm container>
+                                            <Grid item xs container direction="column" spacing={2}>
+                                                <Grid item xs>
+                                                    <Typography gutterBottom variant="subtitle1">
+                                                        {title}
+                                                    </Typography>
+                                                    <Typography variant="body2" gutterBottom>
+                                                        {description}
+                                                    </Typography>
+                                                    <p>{author}</p>
+                                                    <p>{publisher}</p>
+                                                </Grid>
+                                                <Grid item>
+                                                    <Button variant="contained">
+                                                        <a href={amazon_product_url} className={classes.button} target="_blank">
+                                                            Acquista
+                                                        </a>
+                                                    </Button>
+                                                </Grid>
                                             </Grid>
                                         </Grid>
                                     </Grid>
-                                </Grid>
 
-                            </Paper>
+                                </Paper>
+                            </Grid>
                         )
                     })}
-                </div>
+                </Grid>
             </Grid>
         </Grid>
     );
