@@ -45,18 +45,6 @@ function BestsellerBooks() {
                                 <p>{description}</p>
                                 <p>{author}</p>
                                 <p>{publisher}</p>
-                                {/* <div>{isbns.map((isbn) => {
-                                    const {
-                                        isbn10, 
-                                        isbn13
-                                    } = isbn
-                                    return (
-                                        <div key={isbn}>
-                                            <p>{isbn10}</p> 
-                                            <p>{isbn13}</p>
-                                        </div>
-                                    )
-                                })}</div> */}
                             </div>
                         </article>
                     )

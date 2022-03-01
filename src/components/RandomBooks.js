@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import BookImage from "../assets/single-book.png"
+import BookImage from "../assets/single-book.png";
 
 //material
 import { makeStyles } from '@material-ui/core/styles';
@@ -48,7 +48,7 @@ function RandomBooks() {
     }
 
     return (
-        <Grid container>
+        <Grid container data-testid="container-random-books">
             <Grid item xs={12} className={classes.title}>
                 <div>
                     <h1>Random Book Generator</h1>

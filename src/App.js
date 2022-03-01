@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-function App() {
+function App({}) {
   const classes = useStyles();
   const [state, setState] = React.useState({
     right: false,
@@ -87,9 +87,11 @@ function App() {
     <Router>
       <div>
         <div className={classes.root}>
-          <AppBar>
+          <AppBar data-testid="appBar">
             <Toolbar className={classes.toolbar}>
-              <img src={logo} alt="logo" className={classes.logo} />
+              <Link to="/">
+                <img src={logo} alt="logo" className={classes.logo} />
+              </Link>
 
               <div>
                 {['right'].map((anchor) => (
