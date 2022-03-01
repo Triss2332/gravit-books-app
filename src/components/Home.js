@@ -61,7 +61,7 @@ function Home() {
                 </Grid>
             </Grid>
             <Grid item xs={6} className={classes.container}>
-                <img src={HeroImage} className={classes.bannerImage}></img>
+                <img src={HeroImage} className={classes.bannerImage} alt="banner image"></img>
             </Grid>
 
             <FullOverview />
