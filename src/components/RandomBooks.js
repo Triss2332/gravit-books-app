@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import BookImage from "../assets/single-book.png"
+import BookImage from "../assets/single-book.png";
 
 //material
 import { makeStyles } from '@material-ui/core/styles';
