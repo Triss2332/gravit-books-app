@@ -48,7 +48,7 @@ function RandomBooks() {
     }
 
     return (
-        <Grid container>
+        <Grid container data-testid="container-random-books">
             <Grid item xs={12} className={classes.title}>
                 <div>
                     <h1>Random Book Generator</h1>

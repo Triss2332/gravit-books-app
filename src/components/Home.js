@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
     bannerImage: {
         maxWidth: 300,   
         marginRight: 40, 
+        [theme.breakpoints.up('xs')]: {
+            maxWidth: 250,
+        },
         [theme.breakpoints.up('md')]: {
             maxWidth: 400,
         },

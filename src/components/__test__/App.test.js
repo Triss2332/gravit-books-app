@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, cleanup, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 
 import App from '../../App';
 
@@ -9,6 +9,5 @@ test('Renderizza il componente AppBar', () => {
   //AppBar
   const app = screen.getByTestId('appBar');
   expect(app).toBeInTheDocument();
-
 });
 
